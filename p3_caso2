@@ -11,4 +11,14 @@ PERS ⨝ π Correo σ Nom = 'Python I' DICTA
 PERS ⨝ (π Correo σ Nom = 'Python I' DICTA)∩PERS ⨝ (π Correo σ Nom = 'Python II' DICTA)
 PERS ⨝ ((π Correo DICTA) ⨝ (π Correo INSC))
 
+
+
+
+
+
+pi INSC.Correo(sigma INSC.Correo=X.Correo∧INSC.Nom≠X.Nom (ρ X (INSC)⨯INSC))
+
+
+
+
 -- Dataset ID: 9ca33fa7d35797ae05df165582e470cb
