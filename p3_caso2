@@ -6,5 +6,9 @@
 (π Tema, Nom TEMAS) ÷ (π Nom CURSO)
 π Correo DICTA ⨝ π Correo , Nom PERS
 ρ nombre_curso←Nom (π Nom CURSO ⨝ DICTA) ⨝ PERS
+PERS ⨝ π Correo σ Nom = 'Python I' DICTA
+π Correo, Nom PERS ⨝ π Correo σ Nom = 'Python I' or Nom = 'Python II' DICTA
+
+
 
 -- Dataset ID: 9ca33fa7d35797ae05df165582e470cb
