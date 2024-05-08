@@ -1,14 +1,14 @@
-π Correo, Nom (PERS)
-π Nom (CURSO)
+π Correo, Nom PERS
+π Nom CURSO
 σ Ch > 40 (CURSO)
-σ Ch > 40 and Ch < 43 (CURSO)
+σ Ch > 40 ∧ Ch < 43 (CURSO)
 π nombre_curso, Tema (ρ nombre_curso←Nom (CURSO ⨝ TEMAS))
 (π Tema, Nom TEMAS) ÷ (π Nom CURSO)
 π Correo DICTA ⨝ π Correo , Nom PERS
 ρ nombre_curso←Nom (π Nom CURSO ⨝ DICTA) ⨝ PERS
 PERS ⨝ π Correo σ Nom = 'Python I' DICTA
-π Correo, Nom PERS ⨝ π Correo σ Nom = 'Python I' or Nom = 'Python II' DICTA
-
-
+π Correo, Nom PERS ⨝ π Correo σ Nom = 'Python I' ∨ Nom = 'Python II' DICTA
+PERS ⨝ (π Correo σ Nom = 'Python I' DICTA)∩PERS ⨝ (π Correo σ Nom = 'Python II' DICTA)
+PERS ⨝ ((π Correo DICTA) ⨝ (π Correo INSC))
 
 -- Dataset ID: 9ca33fa7d35797ae05df165582e470cb
