@@ -2,9 +2,8 @@ EMPLEADOS ⨝ (π Cuil σ Rol='programador' ∧ Codp='P22-11' ∧ CantHoras>10 T
 EMPLEADOS ⨝ ((π Cuil σ Rol='analista'∧ FDesde ≥ date('2023-01-01') ∧ FHasta ≤ date('2023-12-31') TRABAJA)∩(π Cuil σ Rol='diseñador'∧FDesde ≥ date('2023-01-01') ∧ FHasta ≤ date('2023-12-31') TRABAJA))
 π Lider PROYECTOS - π Cuil EMPLEADOS
 π Cuil,Codp TRABAJA ÷ (π Codp σ Cliente='OSSE' PROYECTOS)
+π TRABAJA.Cuil (σ TRABAJA.Codp = X.Codp ∧ TRABAJA.Cuil = X.Cuil ∧ TRABAJA.Rol ≠ X.Rol (ρ X TRABAJA⨯TRABAJA))
 
-
--- 3)  EMPLEADOS⨝(πCuil(TRABAJA ⨝ πLider PROYECTOS))
 
 
 
