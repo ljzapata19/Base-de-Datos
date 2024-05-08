@@ -5,3 +5,6 @@
 π nombre_curso, Tema (ρ nombre_curso←Nom (CURSO ⨝ TEMAS))
 (π Tema, Nom TEMAS) ÷ (π Nom CURSO)
 
+
+
+--Dataset ID: 9ca33fa7d35797ae05df165582e470cb
