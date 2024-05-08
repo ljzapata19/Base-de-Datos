@@ -1,0 +1,7 @@
+π Correo, Nom (PERS)
+π Nom (CURSO)
+σ Ch > 40 (CURSO)
+σ Ch > 40 and Ch < 43 (CURSO)
+π nombre_curso, Tema (ρ nombre_curso←Nom (CURSO ⨝ TEMAS))
+(π Tema, Nom TEMAS) ÷ (π Nom CURSO)
+π Nom (DICTA ⨝ PERS)
