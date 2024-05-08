@@ -3,6 +3,7 @@ EMPLEADOS ⨝ ((π Cuil σ Rol='analista'∧ FDesde ≥ date('2023-01-01') ∧ F
 π Lider PROYECTOS - π Cuil EMPLEADOS
 π Cuil,Codp TRABAJA ÷ (π Codp σ Cliente='Schillers' PROYECTOS)
 π TRABAJA.Cuil (σ TRABAJA.Codp = X.Codp ∧ TRABAJA.Cuil = X.Cuil ∧ TRABAJA.Rol ≠ X.Rol (ρ X TRABAJA⨯TRABAJA))
+-- π TL1.Cuil (σ TL1.Codp = TL2.Codp ∧ TL1.Cuil = TL2.Cuil ∧ TL1.Rol ≠ TL2.Rol ∧ TL1.Lider≠TL2.Lider (ρ TL2 TL1⨯TL1)(ρ TL1 (π Cuil,Codp,Rol TRABAJA ⨝ π Codp, Lider PROYECTOS)))
 
 
 
