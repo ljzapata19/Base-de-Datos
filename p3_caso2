@@ -16,7 +16,7 @@ PERS ⨝ ((π Correo DICTA) ⨝ (π Correo INSC))
 
 
 
-pi INSC.Correo(sigma INSC.Correo=X.Correo∧INSC.Nom≠X.Nom (ρ X (INSC)⨯INSC))
+π INSC.Correo(σ INSC.Correo=X.Correo∧INSC.Nom≠X.Nom (ρ X INSC⨯INSC))
 
 
 
