@@ -1,0 +1,4 @@
+-- Dataset: 62414bd8eaf6ea30b329c838c565cca9
+-- Ejercicio 1 : traer informacion de todos los prestamos relaizados en la sucursal MERIDA
+σ nombresucursal = 'MERIDA' (prestamo ⨝ sucursal) 
+-- Ejercicio 2: Determinar el nombre de los clientes que viven en OAXACA
