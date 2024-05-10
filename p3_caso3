@@ -5,7 +5,7 @@ EMPLEADOS ⨝ ((π Cuil σ Rol='analista'∧ FDesde ≥ date('2023-01-01') ∧ F
 π TRABAJA.Cuil (σ TRABAJA.Codp = X.Codp ∧ TRABAJA.Cuil = X.Cuil ∧ TRABAJA.Rol ≠ X.Rol (ρ X TRABAJA⨯TRABAJA))
 (π TRABAJA.Cuil (σ TRABAJA.Codp = X.Codp ∧ TRABAJA.Cuil = X.Cuil ∧ TRABAJA.Rol ≠ X.Rol (ρ X TRABAJA⨯TRABAJA)) ) ∪ π Lider PROYECTOS
 π Cuil, Nom EMPLEADOS ⨝ (π Cuil σ Codp = 'P22-05' TRABAJA ∪ π Lider σ Codp = 'P22-05' PROYECTOS)
-(π Cuil, Codp σ Rol='analista' ∧ FDesde ≥ date('2023-01-01') ∧ FHasta ≤ date('2023-12-31') (TRABAJA)) ∩ (π Cuil, Codp σ Rol='diseñador' ∧ FDesde ≥ date('2023-01-01') ∧ FHasta ≤ date('2023-12-31') (TRABAJA))
+π Cuil, Codp σ Rol='analista' ∧ FDesde ≥ date('2023-01-01') ∧ FHasta ≤ date('2023-12-31') (TRABAJA) ∩ π Cuil, Codp σ Rol='diseñador' ∧ FDesde ≥ date('2023-01-01') ∧ FHasta ≤ date('2023-12-31') (TRABAJA)
 
 
 
