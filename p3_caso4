@@ -1,1 +1,1 @@
-
+π Cod, Inversion σ Nombre='Empresa A' (σ FechaI ≥ date('2023-01-01') ∧ FechaF ≤ date('2023-12-31') PROY ⨝ EMP)
