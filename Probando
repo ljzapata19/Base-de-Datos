@@ -12,4 +12,4 @@ ctacliente ⨝ prestatario -- trae clientes q tienen cuenta y prestamo
 ctacliente ⟕ prestatario -- trae clientes q tienen cuenta, y pueden o no tener prestamo (se usa el left outer join, ya que puede tener null en prestatario)
 ctacliente ⟖ prestatario -- trae clientes q tienen prestamo, y pueden o no tener cuenta (se usa el right outer join, ya que puede tener null en cuenta)
 -- Ahora si en el ejercicio si queremos q tengan cuenta pero no prestamo
-(ctacliente ⟕ prestatario) - (ctacliente ⨝ prestatario)
+π nombrecliente, numcta (cliente ⨝((ctacliente ⟕ prestatario) - (ctacliente ⨝ prestatario)))
