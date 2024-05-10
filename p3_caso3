@@ -11,7 +11,6 @@ EMPLEADOS ⨝ ((π Cuil σ Rol='analista'∧ FDesde ≥ date('2023-01-01') ∧ F
 
 
 
-
 -- analizando el item 6
 π TL1.Cuil (σ TL1.Codp = TL2.Codp ∧ TL1.Cuil = TL2.Cuil ∧ TL1.Rol ≠ TL2.Rol ∧ TL1.Lider≠TL2.Lider (ρ TL2 TL1⨯TL1)(ρ TL1 (π Cuil,Codp,Rol TRABAJA ⨝ π Codp, Lider PROYECTOS)))
 π TL1.Cuil (σ TL1.Nomp = TL2.Nomp ∧ TL1.Cuil = TL2.Cuil ∧ (TL1.Rol ≠ TL2.Rol ∨ TL1.Lider ≠ TL2.Lider) (ρ TL2 TL1⨯TL1)(ρ TL1 π Cuil,Codp,Rol TRABAJA ⨝ π Codp,Nomp, Lider PROYECTOS))
