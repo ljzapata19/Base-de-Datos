@@ -2,3 +2,6 @@
 -- Ejercicio 1 : traer informacion de todos los prestamos relaizados en la sucursal MERIDA
 σ nombresucursal = 'MERIDA' (prestamo ⨝ sucursal) 
 -- Ejercicio 2: Determinar el nombre de los clientes que viven en OAXACA
+π nombrecliente σ estado = 'OAXACA' cliente
+-- Ejercicio 3: Nombre de todos los clientes del banco que tiene una cuenta, un prestamo o ambas. (Usando operadores de conjuntos)
+π nombrecliente cliente ⨝ (ctacliente ∪ prestatario)
