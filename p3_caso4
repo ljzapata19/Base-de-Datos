@@ -1,1 +1,3 @@
 π Cod, Inversion σ Nombre='Techint' (σ FechaI ≥ date('2023-01-01') ∧ FechaF ≤ date('2023-12-31') PROY ⨝ EMP)
+
+σ Pais = Paisr GEO
