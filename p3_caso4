@@ -1,3 +1,9 @@
 π Cod, Inversion σ Nombre='Techint' (σ FechaI ≥ date('2023-01-01') ∧ FechaF ≤ date('2023-12-31') PROY ⨝ EMP)
 
 σ Pais = Paisr GEO
+π Num, Nombre, Web (EMP ⨝ (π Num, Cod PROY ⨝ (π Cod,Cuil TRA ⨝ π Cuil σ Pais='Argentina' ∨ Pais = 'Chile' GEO)))
+π Cod, Inversion, Pais (PROY ⨝ (π Cod,Cuil TRA ⨝ π Cuil, Pais σ Pais≠'Argentina' GEO))
+
+π Cod, Inversion, Pais (PROY ⨝ (TRA ⨝ σ Pais≠'Argentina' GEO))
+σ Cod='P005' TRA ⨝ GEO
+-- me quede en el 5
