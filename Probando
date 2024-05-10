@@ -7,3 +7,9 @@
 π nombrecliente (cliente ⨝ (ctacliente ∪ prestatario))
 -- Ejercicio 4: Relacion de los clientes que tienen abierta una cuenta, pero no tienen ninguna de credito (prestamo). (Operador de resta o Diferencia de conjunto)
 cliente ⨝ (π idcliente ctacliente - π idcliente prestatario)
+-- Si ademas de los datos del cliente queremos el nro de cuenta debemos usar el join externo, estos se usan para poder encontrar informacion faltante
+ctacliente ⨝ prestatario -- trae clientes q tienen cuenta y prestamo
+ctacliente ⟕ prestatario -- trae clientes q tienen cuenta, y pueden o no tener prestamo (se usa el left outer join, ya que puede tener null en prestatario)
+ctacliente ⟖ prestatario -- trae clientes q tienen prestamo, y pueden o no tener cuenta (se usa el right outer join, ya que puede tener null en cuenta)
+-- Ahora si en el ejercicio si queremos q tengan cuenta pero no prestamo
+(ctacliente ⟕ prestatario) - (ctacliente ⨝ prestatario)
