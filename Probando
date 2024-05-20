@@ -17,3 +17,5 @@ ctacliente ⟖ prestatario -- trae clientes q tienen prestamo, y pueden o no ten
 cliente ⨝ (π idcliente ctacliente ∩ π idcliente prestatario)
 -- Ejercicio 6: Nombre de todos los clientes que tienen un crédito en la sucursal TULUM
 π idcliente, nombrecliente cliente ⨝ (prestatario ⨝ prestamo ⨝ σ nombresucursal = 'TULUM' sucursal)
+-- Ejercicio 7: Nombre de todos los clientes que tienen un prestamo y el importe del mismo.
+π nombrecliente, importe (cliente ⨝ prestatario ⨝ prestamo)
