@@ -19,3 +19,7 @@ cliente ⨝ (π idcliente ctacliente ∩ π idcliente prestatario)
 π idcliente, nombrecliente cliente ⨝ (prestatario ⨝ prestamo ⨝ σ nombresucursal = 'TULUM' sucursal)
 -- Ejercicio 7: Nombre de todos los clientes que tienen un prestamo y el importe del mismo.
 π nombrecliente, importe (cliente ⨝ prestatario ⨝ prestamo)
+-- Ejercicio 8: El nombre de todas las sucursales con clientes que tienen cuenta abierta y que viven en CHIAPAS
+π numsucursal, nombresucursal, estado (sucursal ⨝ cuenta ⨝ ctacliente ⨝ π idcliente σ estado = 'CHIAPAS' cliente)
+
+π nombresucursal ((π idcliente, nombrecliente (σ estado = 'CHIAPAS' (cliente)))⨝ ctacliente ⨝ cuenta ⨝ sucursal)
