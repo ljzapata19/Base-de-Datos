@@ -1,0 +1,33 @@
+π Nom, Edad, Zona PERS
+π Zona PERS
+π Zona CLUB
+π Zona PERS ∪ π Zona CLUB
+π Nomc σ Zona = 'Capital' ∨ Zona = 'Desamparados' ∨ Zona = 'Rivadavia' CLUB
+π Nom, Cuil, Edad (PERS ⨝ PRAC)
+π Cuil (PRAC ⨝ σ Nomd = 'Tenis' DEPO)         
+π Nomc (CLUB ⨝ PRAC ⨝ σ Nomd = 'Fútbol' DEPO)
+π Cuil, Nom, Nomd, Nomc (CLUB ⨝ DEPO ⨝ PRAC ⨝ π Cuil,Nom PERS) 
+π	Cuil,Nom(PERS ⨝ σ Codd = 'D01' PRAC)	∩	π	Cuil,Nom(PERS ⨝ σ Codd = 'D22' PRAC)	∩	π Cuil,Nom(PERS ⨝ σ Codd = 'D10' PRAC)
+(π Cuil, Nom (PERS ⨝ PRAC)) - (π Cuil, Nom (PERS ⨝ PRAC ⨝ (π Codc σ Nomc = 'Ausonia' CLUB)))
+π Cuil, Nom (PERS ⨝ PRAC ⨝ (π Codc σ Nomc = 'Ausonia' ∨ Nomc = 'UVT' CLUB))
+π Codd (σ Sexo = 'M' PERS ⨝ PRAC)- π Codd (σ Sexo = 'F' PERS ⨝ PRAC)
+π Cuil, Nom, Dir (PERS ⨝  (π Zona σ Cuil = 1204984252 ∧ Nom = 'Juan Perez' PERS))
+-- 15
+ana = ρ ana (π Edad σ Cuil = 7184984253 PERS)
+π Cuil, Nom (ana ⨝ ana.Edad < PERS.Edad PERS)
+-- 16
+π Cuil, Nom, Nomc, PERS.Zona, CLUB.Zona (PERS ⨝ PRAC ⨝ PERS.Zona = CLUB.Zona CLUB)
+-- 17
+π Nom, Codd (PERS ⟕ (PRAC⨝DEPO))
+
+
+
+
+-- 11
+depauso = π Cuil, Nom (PERS ⨝ PRAC ⨝ (π Codc σ Nomc = 'Ausonia' CLUB))
+dep = π Cuil, Nom (PERS ⨝ PRAC)
+dep - depauso
+
+-- 14
+zonajp = π Zona σ Cuil = 1204984252 ∧ Nom = 'Juan Perez' PERS
+π Cuil, Nom, Dir ((PERS ⨝  zonajp) - σ Cuil = 1204984252 PERS)
