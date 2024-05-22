@@ -12,3 +12,6 @@ Alumno ⨝ ((π Cuil Alumno ∩ π Cuil Docente) ∩ π CuilA Tesis)
 (Docente ⨝ π Cuil, NroT (Dirige ⨝ Tesis)) ÷ (π NroT σ AreaC = 'Base de Datos' Tesis) 
 -- 6. Docentes (Cuil y nombre y apellido) que han actuado como codirectores de tesis.
 π Cuil, NyAp (Docente ⨝ σ Rol = 'codirector' Dirige)
+-- 7. Analice la expresión del álgebra: π Carrera Alumnos. Dado que varios alumnos pueden pertenecer a la misma carrera,
+-- ¿el resultado de la expresión podría generar tuplas repetidas? Justifique.
+π Carrera Alumno
