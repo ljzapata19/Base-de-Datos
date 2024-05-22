@@ -1,8 +1,8 @@
--- 1 
+-- 1. Docentes (todos sus datos) que siempre dirigieron tesis dentro del área de Base de Datos. 
 siBD = ρ siBD π Cuil (Dirige ⨝ σ AreaC = 'Base de Datos' Tesis)
 noBD = ρ noBD π Cuil (Dirige ⨝ σ AreaC ≠ 'Base de Datos' Tesis) 
 Docente ⨝ (siBD - noBD)
--- 2
+-- 2. Docentes (todos sus datos) que dirigieron (en el rol de director, no de codirector) más de una tesis.
 π Dirige.Cuil (σ Dirige.Cuil = X.Cuil ∧ Dirige.NroT ≠ X.NroT ∧ Dirige.Rol = 'director' ∧ X.Rol = 'director' (ρ X Dirige⨯Dirige))
 -- 3. Alumnos (todos sus datos) que todavía no comenzaron su tesis.
 Alumno ⨝ (π Cuil Alumno - π CuilA Tesis) 
@@ -10,3 +10,5 @@ Alumno ⨝ (π Cuil Alumno - π CuilA Tesis)
 Alumno ⨝ ((π Cuil Alumno ∩ π Cuil Docente) ∩ π CuilA Tesis) 
 -- 5. Docentes (Cuil y nombre y apellido) que han intervenido (como directores o codirectores) en todas las tesis del área Base de Datos.
 (Docente ⨝ π Cuil, NroT (Dirige ⨝ Tesis)) ÷ (π NroT σ AreaC = 'Base de Datos' Tesis) 
+-- 6. Docentes (Cuil y nombre y apellido) que han actuado como codirectores de tesis.
+π Cuil, NyAp (Docente ⨝ σ Rol = 'codirector' Dirige)
