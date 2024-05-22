@@ -18,7 +18,7 @@ ana = ρ ana (π Edad σ Cuil = 7184984253 PERS)
 -- 16
 π Cuil, Nom, Nomc, PERS.Zona, CLUB.Zona (PERS ⨝ PRAC ⨝ PERS.Zona = CLUB.Zona CLUB)
 -- 17
-π Nom, Codd (PERS ⟕ (PRAC⨝DEPO))
+π Nom, Nomd (PERS ⟕ (PRAC⨝DEPO))
 
 
 
