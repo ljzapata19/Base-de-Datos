@@ -9,3 +9,4 @@ Alumno ⨝ (π Cuil Alumno - π CuilA Tesis)
 -- 4. Alumnos (todos sus datos) que ya comenzaron su tesis, y que son docentes.
 Alumno ⨝ ((π Cuil Alumno ∩ π Cuil Docente) ∩ π CuilA Tesis) 
 -- 5. Docentes (Cuil y nombre y apellido) que han intervenido (como directores o codirectores) en todas las tesis del área Base de Datos.
+(Docente ⨝ π Cuil, NroT (Dirige ⨝ Tesis)) ÷ (π NroT σ AreaC = 'Base de Datos' Tesis) 
