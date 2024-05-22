@@ -26,7 +26,10 @@ ana = ρ ana (π Edad σ Cuil = 7184984253 PERS)
 -- 20: Personas (todos sus datos personales) que practican todos los deportes.
 PERS ⨝(π Codd, Cuil(PRAC⨝DEPO)) ÷ π Codd DEPO
 -- 21. Nombre de las personas que practican todos los deportes que se practican en el Banco Hispano.
-
+depBH =ρ depBH (π Codd, Nomd, Codc σ Nomc = 'Banco Hispano' (DEPO⨝ π Codd,Codc, Nomc (PRAC⨝CLUB)))
+depBH =ρ depBH (π Codd, Nomd, Codc  (DEPO⨝ (PRAC⨝ πCodc σ Nomc = 'Banco Hispano'CLUB)))
+PRAC⨝depBH
+π Nom (PERS ⨝ π Cuil, Codd (PRAC⨝depBH))÷ π Codd depBH
 
 -- 11
 depauso = π Cuil, Nom (PERS ⨝ PRAC ⨝ (π Codc σ Nomc = 'Ausonia' CLUB))
