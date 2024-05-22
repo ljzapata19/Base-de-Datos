@@ -19,7 +19,15 @@ ana = ρ ana (π Edad σ Cuil = 7184984253 PERS)
 π Cuil, Nom, Nomc, PERS.Zona, CLUB.Zona (PERS ⨝ PRAC ⨝ PERS.Zona = CLUB.Zona CLUB)
 -- 17
 π Nom, Nomd (PERS ⟕ (PRAC⨝DEPO))
-
+-- 18
+π Nomd, Nomc ((PRAC ⨝ DEPO) ⨝ CLUB)
+π Nomd (DEPO⨝(πCodd (PRAC⨝CLUB)))
+π Cuil PRAC
+π Nomd (DEPO⨝(πCodd,Codc (PRAC⨝CLUB) ÷ πCodc CLUB))
+π Nomd (DEPO⨝(πCodd,Codc (PRAC⨝CLUB)) ÷ πCodc CLUB))
+-- 19
+σ Clase = 'Balón' DEPO
+DEPO.Clase
 
 
 
