@@ -1,0 +1,5 @@
+-- 1 
+siBD = ρ siBD π Cuil (Dirige ⨝ σ AreaC = 'Base de Datos' Tesis)
+noBD = ρ noBD π Cuil (Dirige ⨝ σ AreaC ≠ 'Base de Datos' Tesis) 
+Docente ⨝ (siBD - noBD)
+-- 2
