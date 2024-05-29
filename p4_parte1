@@ -1,0 +1,57 @@
+-- A
+CREATE TABLE PERS
+(
+    id int NOT NULL,
+    nom varchar(100),
+    ciudad_idc int NOT NULL,
+    edad integer,
+    PRIMARY KEY (id),
+	FOREIGN KEY (ciudad_idc) REFERENCES Ciu(ciudad_idc)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE
+);
+CREATE TABLE Ciu
+(
+	ciudad_idc int NOT NULL,
+	ciudad_nom varchar(100),
+	PRIMARY KEY (ciudad_idc)
+)
+-- B
+CREATE TABLE PERS
+(
+    id int NOT NULL,
+    nom varchar(100),
+    ciudad_idc int NOT NULL,
+    edad integer,
+    PRIMARY KEY (id),
+	FOREIGN KEY (ciudad_idc) REFERENCES Ciu(ciudad_idc)
+    ON DELETE SET NULL 
+    ON UPDATE CASCADE
+);
+CREATE TABLE Ciu
+(
+	ciudad_idc int NOT NULL,
+	ciudad_nom varchar(100),
+	PRIMARY KEY (ciudad_idc)
+)
+SELECT * FROM PERS
+
+--Insertar Ciudad
+INSERT INTO Ciu(ciudad_idc, ciudad_nom) VALUES (1, 'Galilea' );
+INSERT INTO Ciu(ciudad_idc, ciudad_nom) VALUES (2,'Betsaida');
+INSERT INTO Ciu(ciudad_idc, ciudad_nom) VALUES (3,'Patmos');
+INSERT INTO Ciu(ciudad_idc, ciudad_nom) VALUES (4,'Jerusalén');
+INSERT INTO Ciu(ciudad_idc, ciudad_nom) VALUES (5,'Buenos Aires');
+
+-- Insertar Personas
+INSERT INTO PERS(id, nom, ciudad_idc, edad) VALUES (1,'Pedro Cortes',1,16);
+INSERT INTO PERS(id, nom, ciudad_idc, edad) VALUES (2,'Santiago Mas',2,25);
+INSERT INTO PERS(id, nom, ciudad_idc, edad) VALUES (3,'Juan Basti',5, 50);
+INSERT INTO PERS(id, nom, ciudad_idc, edad) VALUES (4,'Andrea Hernández',1,36);
+INSERT INTO PERS(id, nom, ciudad_idc, edad) VALUES (5,'Ana Perez',1,30);
+
+-- Eliminar
+DELETE FROM Ciu WHERE ciudad_idc=1;
+
+
+
