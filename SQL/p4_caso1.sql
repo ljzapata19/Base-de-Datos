@@ -314,6 +314,5 @@ create view Alumnos_python1 as
 select pers.* from pers join insc on pers.correo=insc.correo where insc.nom='Python I'
 
 --43
-select * from Alumnos_python1 where correo
-
+select * from Alumnos_python1 where correo like '%@gmail.com'
 
