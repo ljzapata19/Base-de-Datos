@@ -155,7 +155,7 @@ natural join (select nom
 			from dirige
 			group by nom))
 )
-
+--como en el pdf
 select nom, fechanac
 from persona natural join dirige
 group by nom
